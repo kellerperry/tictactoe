@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.title-div, 
+.game-container {
+    grid-column: 2 / 3;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 100px));
+    grid-template-rows: repeat(3, minmax(50px, 100px));
+    justify-content: center;
+}
+
+.reset {
+    margin-top: 20px;
+    grid-column-start: 2;
+}
+
+.player-one-div {
+    grid-column: 1 / 2;
+}
+
+.player-two-div {
+    grid-column: 3 / 4;
+}

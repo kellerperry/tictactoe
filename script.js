@@ -62,7 +62,7 @@ const gameController = (function () {
         if(checkWinner(boardCell)) {
             endGame = true;
             renderGame.renderGameBoard();
-            renderGame.renderMessage(`Player ${getCurrentPlayerMarker()} Wins`);
+            renderGame.renderMessage(`Player ${getCurrentPlayerMarker()} Wins!`);
             renderGame.createResetBtn();
             return;
         }
@@ -128,7 +128,6 @@ const gameController = (function () {
 const renderGame = (() => {
     const messageDiv = document.querySelector(".message");
     const boardDiv = document.querySelector(".board");
-    const boardContainer = document.querySelector(".game-container");
 
     const renderMessage = (message) => {
         messageDiv.textContent = `${message}`;
